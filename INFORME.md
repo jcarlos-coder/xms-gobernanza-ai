@@ -37,9 +37,7 @@ importante quede en la cabeza de una persona o quede en un proceso que el
 equipo entero puede confiar en que se cumple, se haya acordado de revisarlo
 o no.
 
-Hoy, buena parte de esto ya existe en las herramientas que usamos (ver
-sección 5) — lo que falta es la regla que fuerza su uso consistente, no la
-herramienta en sí.
+La sección 4 detalla los cuatro ejes concretos donde esto se aplica hoy.
 
 ## 3. Reglas de agente — `development-rules.md`
 
@@ -79,6 +77,13 @@ secretos de producción, configuración de CI/CD, ni hace push directo a una
 rama protegida sin que una persona apruebe ESE cambio puntual. Todo lo demás
 sigue el proceso normal de PR/review del equipo.
 
+En términos de negocio, esto es una garantía auditable, no solo una buena
+práctica interna: ningún incidente de seguridad o de producción puede
+originarse en un cambio autónomo de la IA sin que quede una aprobación
+humana puntual registrada. Es exactamente el tipo de control que un proceso
+de auditoría o de cumplimiento espera encontrar — y hoy lo tenemos desde
+el primer día, no como reacción a un incidente.
+
 ### b. Gobernanza
 
 Quién revisa qué y cuándo. El sistema de revisión por capas que ya tenemos
@@ -97,15 +102,17 @@ señal de diagnosticar la causa real, no de aplicar otro parche.
 
 ### d. Seguimiento (trazabilidad)
 
-Por qué se construyó algo, y qué tarea o spec lo justifica. Las
-herramientas para esto ya existen (roadmap, memoria persistente, el flujo de
-spec) — lo que falta es la regla que las hace de uso obligatorio, no
-opcional cuando a alguien se le ocurre.
+Por qué se construyó algo, y qué tarea o spec lo justifica. El roadmap, la
+memoria persistente y el flujo de spec (sección 7) ya cubren esto — el
+cambio es que su uso deja de ser algo que alguien recuerda hacer "cuando
+tiene tiempo" y pasa a ser parte del flujo por defecto.
 
 ## 5. Herramientas sugeridas
 
 Sin entrar en el detalle técnico — eso vive en el `README.md` de este mismo
-kit, con descripciones y enlaces de descarga de cada una:
+kit, con descripciones y enlaces de descarga de cada una. El flujo de trabajo
+(ODD) y el sistema de revisión (RDD) que estas herramientas habilitan se
+explican en la sección 7:
 
 - **Runtime de IA** (Claude Code / OpenCode) — el entorno donde todo esto
   corre.
