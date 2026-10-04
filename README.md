@@ -1,5 +1,7 @@
 # Structured Development Toolkit
 
+Repository: [github.com/jcarlos-coder/xms-gobernanza-ai](https://github.com/jcarlos-coder/xms-gobernanza-ai)
+
 What this repo is: a working set of tools and rules for AI-assisted
 development that replaces improvisation with a system — and the 14 rules in
 [`development-rules.md`](./development-rules.md) that tie them together.
