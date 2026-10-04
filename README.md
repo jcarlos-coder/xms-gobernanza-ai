@@ -74,11 +74,9 @@ search.
 **What it contributes:** answers to "who calls this" or "what breaks if I
 change this" without reading the whole repo first — fewer wrong guesses,
 fewer wasted tokens re-deriving context that's already indexed.
-**Get it:** there are several same-named projects on GitHub; the one that
-matches what's wired into this `gentle-ai` setup is most likely
-[github.com/colbymchenry/codegraph](https://github.com/colbymchenry/codegraph)
-— **confirm the exact repo before publishing this**, since more than one
-project shares the name and description.
+**Get it:** [github.com/colbymchenry/codegraph](https://github.com/colbymchenry/codegraph)
+(confirmed from `gentle-ai`'s own source — several unrelated projects share
+the name, this is the one gentle-ai installs) · package: `@colbymchenry/codegraph@latest`
 
 ### SDD (Spec-Driven Development) / Organic-Driven Development
 Not a separate download — a workflow gentle-ai already provides: explore →
