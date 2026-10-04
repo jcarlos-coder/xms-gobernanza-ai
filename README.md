@@ -78,6 +78,17 @@ fewer wasted tokens re-deriving context that's already indexed.
 (confirmed from `gentle-ai`'s own source — several unrelated projects share
 the name, this is the one gentle-ai installs) · package: `@colbymchenry/codegraph@latest`
 
+### Context7
+Fetches current, version-accurate documentation and code examples for a
+library or framework directly into the agent's context, instead of relying
+on whatever got memorized during training (which can already be stale by
+the time a model ships).
+**What it contributes:** the actual mechanism behind rule 5 ("check current
+sources before trusting your memory") — not just the policy that says to
+verify, but the tool that does it, mid-task, without leaving the editor.
+**Get it:** [github.com/upstash/context7](https://github.com/upstash/context7)
+— MIT license, free (no API key needed for basic rate limits).
+
 ### SDD (Spec-Driven Development) / Organic-Driven Development
 Not a separate download — a workflow gentle-ai already provides: explore →
 propose → spec → design → tasks → apply → verify → archive, so a non-trivial

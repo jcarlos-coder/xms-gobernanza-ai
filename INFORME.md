@@ -115,6 +115,10 @@ kit, con descripciones y enlaces de descarga de cada una:
   qué" de una decisión una vez que termina la conversación que la tomó.
 - **CodeGraph** — un mapa indexado del código, para que la IA responda "quién
   llama a esto" sin tener que adivinar leyendo todo el repo.
+- **Context7** — documentación actualizada de librerías y frameworks,
+  consultada en el momento — la forma concreta de mantener la documentación
+  con la que trabaja la IA al día, en vez de depender de lo que memorizó
+  durante su entrenamiento.
 
 ## 6. Arquitectura de software en los proyectos
 
