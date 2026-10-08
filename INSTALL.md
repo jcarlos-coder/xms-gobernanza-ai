@@ -57,3 +57,57 @@ That's the whole install. No build step, no dependencies.
 Pull the latest version into `~/dev-governance-kit` and every project picks
 it up on its next session — nothing to re-point, nothing per-project to
 touch.
+
+## 5. Persona (optional)
+
+Persona is the voice layer: a `PERSONA.md` tone control panel that the
+agent loads at session start and evolves from evidence of how the user
+corrects it — with the user's manual edits always winning over learned
+adjustments.
+
+This repo publishes **only the placeholder template**
+(`persona/PERSONA.template.md`). The working layer — the skill and your
+live voice file — lives in the machine's governance implementation, not in
+this repo, and is wired into each runtime from there.
+
+### Install (this setup)
+
+1. Place the working layer in your governance implementation folder
+   (in this setup: `~/.config/shared-agent-rules/persona/`) with the skill
+   (`SKILL.md`, `references/`) and a copy of `PERSONA.template.md` as the
+   bootstrap fallback.
+
+2. Create your live voice file from the template. It's personal and
+   gitignored in the implementation repo, so pulls never overwrite it:
+
+   ```
+   cp ~/.config/shared-agent-rules/persona/PERSONA.template.md \
+      ~/.config/shared-agent-rules/persona/PERSONA.md
+   ```
+
+3. Point each tool at the implementation's persona folder with one
+   symlink — no copies, same one-copy-per-machine principle as the rules
+   file:
+
+   - **OpenCode**:
+     ```
+     ln -s ~/.config/shared-agent-rules/persona \
+        ~/.config/opencode/skills/persona
+     ```
+   - **Claude Code**:
+     ```
+     ln -s ~/.config/shared-agent-rules/persona \
+        ~/.claude/skills/persona
+     ```
+
+4. Next session, the agent reads `PERSONA.md` and applies the voice.
+
+### Updating
+
+- Your live `PERSONA.md` is yours: gitignored, never touched by pulls, and
+  the agent only appends dated entries to its **Evolución** section.
+- Skill and template updates flow through the implementation repo
+  (`git pull` there), not through this one.
+
+Other teams: use `PERSONA.template.md` as the starting point for your own
+voice layer; the working skill itself is internal to this setup.

@@ -6,6 +6,10 @@ What this repo is: a working set of tools and rules for AI-assisted
 development that replaces improvisation with a system — and the 14 rules in
 [`development-rules.md`](./development-rules.md) that tie them together.
 
+Every file in this repo is a **template** — nothing here is a live file.
+The live system instantiates these templates on each machine, and live
+content never flows back into the repo.
+
 ## Vibe coding vs. structured development
 
 **Vibe coding** means accepting what an AI assistant produces largely on
@@ -99,11 +103,13 @@ of what shipped afterward.
 **What it contributes:** the opposite of "ask the AI to build X and see what
 comes out" — a change exists on paper, reviewable, before it exists in code.
 
-### Persona (optional, internal)
-A small per-user file that tunes an agent's conversational tone and learns
-from how it's corrected over time. Not a public tool — something built
-in-house; mentioned here because it's part of this setup, not something to
-install.
+### Persona (optional)
+A per-user voice layer: a `PERSONA.md` tone control panel that the agent
+loads at session start and evolves from how the user corrects it — manual
+edits always win. This repo publishes only the placeholder
+(`persona/PERSONA.template.md`); the working skill and the live voice file
+live in the machine's governance implementation, wired into each runtime
+with one symlink. See [`INSTALL.md`](./INSTALL.md) § 5.
 
 ## Our own rules — `development-rules.md`
 
